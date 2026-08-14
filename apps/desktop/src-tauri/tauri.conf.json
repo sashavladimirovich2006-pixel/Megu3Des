@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Megu3D",
+  "version": "0.1.0",
+  "identifier": "app.megu3d.desktop",
+  "build": {
+    "beforeDevCommand": "pnpm --filter @megu3d/desktop dev:vite",
+    "devUrl": "http://localhost:5173",
+    "beforeBuildCommand": "pnpm --filter @megu3d/desktop build:vite",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Megu3D",
+        "width": 1600,
+        "height": 1000,
+        "minWidth": 1024,
+        "minHeight": 640,
+        "resizable": true,
+        "center": true,
+        "theme": "Dark",
+        "visible": true
+      }
+    ],
+    "security": { "csp": null }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["msi", "nsis"],
+    "icon": ["icons/icon.ico"],
+    "publisher": "Megu3D Contributors",
+    "copyright": "Copyright (c) 2026 Megu3D Contributors",
+    "shortDescription": "Professional 3D suite",
+    "category": "DeveloperTool"
+  }
+}
