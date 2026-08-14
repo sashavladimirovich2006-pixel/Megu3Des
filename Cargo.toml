@@ -1,0 +1,31 @@
+[workspace]
+resolver = "2"
+members = ["crates/*", "apps/desktop/src-tauri"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+rust-version = "1.77"
+repository = "https://github.com/sashavladimirovich2006-pixel/Megu3Des"
+
+[workspace.dependencies]
+megu3d-mesh = { path = "crates/megu3d-mesh" }
+megu3d-core = { path = "crates/megu3d-core" }
+megu3d-cmd = { path = "crates/megu3d-cmd" }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+thiserror = "1"
+slotmap = "1"
+uuid = { version = "1", features = ["v4", "serde"] }
+ts-rs = "10"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+strip = true
+
+[profile.dev]
+opt-level = 1
