@@ -1,0 +1,13 @@
+{
+  "name": "@megu3d/ipc",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "dependencies": {
+    "@megu3d/types": "workspace:*",
+    "@tauri-apps/api": "^2.1.1"
+  },
+  "devDependencies": { "typescript": "^5.6.3", "vitest": "^2.1.4" }
+}
