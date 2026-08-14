@@ -295,7 +295,7 @@ export function findConflicts(commands: Command[]): string[] {
 		if (!command.keybinding) continue
 		const chord = parseChord(command.keybinding)
 		if (!chord) {
-			conflicts.push(`${command.id}: invalid binding \"${command.keybinding}\"`)
+			conflicts.push(`${command.id}: invalid binding "${command.keybinding}"`)
 			continue
 		}
 		const signature = chordSignature(chord)
