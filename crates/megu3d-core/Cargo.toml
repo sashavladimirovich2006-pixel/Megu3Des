@@ -1,0 +1,18 @@
+[package]
+name = "megu3d-core"
+description = "Megu3D scene model and application metadata"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+megu3d-mesh.workspace = true
+serde.workspace = true
+slotmap = { workspace = true, features = ["serde"] }
+uuid.workspace = true
+ts-rs.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
