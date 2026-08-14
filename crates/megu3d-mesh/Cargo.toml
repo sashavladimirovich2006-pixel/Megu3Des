@@ -1,0 +1,11 @@
+[package]
+name = "megu3d-mesh"
+description = "Megu3D primitive mesh generation and indexed mesh data"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+serde.workspace = true
+thiserror.workspace = true
