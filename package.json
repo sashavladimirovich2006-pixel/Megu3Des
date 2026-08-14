@@ -1,0 +1,30 @@
+{
+  "name": "megu3d",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "packageManager": "pnpm@9.12.3",
+  "engines": { "node": ">=20.11" },
+  "scripts": {
+    "dev": "pnpm --filter @megu3d/desktop dev",
+    "build": "pnpm --filter @megu3d/desktop build",
+    "typecheck": "pnpm -r --parallel typecheck",
+    "lint": "eslint .",
+    "fmt": "prettier --write .",
+    "test": "vitest run --passWithNoTests",
+    "rust:fmt": "cargo fmt --all -- --check",
+    "rust:lint": "cargo clippy -p megu3d-core -p megu3d-cmd --all-targets -- -D warnings",
+    "rust:test": "cargo test -p megu3d-core -p megu3d-cmd -p megu3d-mesh",
+    "ipc:types": "cargo test -p megu3d-core export_bindings",
+    "ci": "pnpm typecheck && pnpm lint && pnpm test && pnpm rust:fmt && pnpm rust:lint && pnpm rust:test"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.14.0",
+    "@types/node": "^22.9.0",
+    "eslint": "^9.14.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3",
+    "typescript-eslint": "^8.13.0",
+    "vitest": "^2.1.4"
+  }
+}
