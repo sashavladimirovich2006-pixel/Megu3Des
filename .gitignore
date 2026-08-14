@@ -1,0 +1,59 @@
+# Node
+node_modules/
+.pnpm-store/
+dist/
+build/
+.vite/
+*.tsbuildinfo
+
+# Rust
+target/
+**/*.rs.bk
+
+# Tauri
+apps/desktop/src-tauri/target/
+apps/desktop/src-tauri/gen/
+
+# C++
+cpp/**/build/
+cpp/**/out/
+*.obj
+*.pdb
+*.ilk
+*.exp
+*.lib
+*.dll
+*.exe
+
+# Go
+go/**/bin/
+
+# IDE / OS
+.vs/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.recommended.json
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Логи, кэши, артефакты
+*.log
+coverage/
+bench-results/
+test-results/
+playwright-report/
+
+# Секреты и локальное окружение
+.env
+.env.*
+!.env.example
+*.pem
+*.pfx
+*.p12
+secrets/
+
+# Артефакты приложения
+*.megu3d.bak
+autosave/
