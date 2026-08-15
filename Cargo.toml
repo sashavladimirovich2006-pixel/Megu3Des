@@ -13,6 +13,7 @@ repository = "https://github.com/sashavladimirovich2006-pixel/Megu3Des"
 megu3d-mesh = { path = "crates/megu3d-mesh" }
 megu3d-core = { path = "crates/megu3d-core" }
 megu3d-cmd = { path = "crates/megu3d-cmd" }
+megu3d-io = { path = "crates/megu3d-io" }
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 thiserror = "1"
