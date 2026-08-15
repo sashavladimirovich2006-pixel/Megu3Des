@@ -1,0 +1,16 @@
+[package]
+name = "megu3d-io"
+description = "Megu3D project container, manifest and schema migrations"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+megu3d-core.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+uuid.workspace = true
