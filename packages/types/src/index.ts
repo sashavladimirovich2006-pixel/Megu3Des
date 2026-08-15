@@ -1,6 +1,7 @@
 export type { AppInfo } from "./generated/AppInfo"
 export type { CommandRequestDto } from "./generated/CommandRequestDto"
 export type { CommandResultDto } from "./generated/CommandResultDto"
+export type { DocumentStateDto } from "./generated/DocumentStateDto"
 export type { ErrorDto } from "./generated/ErrorDto"
 export type { HistoryStateDto } from "./generated/HistoryStateDto"
 export type { MeshInfoDto } from "./generated/MeshInfoDto"
@@ -22,7 +23,13 @@ export const IPC = {
 	queryAppInfo: "megu3d.query.appInfo",
 	querySceneStats: "megu3d.query.sceneStats",
 	queryScene: "megu3d.query.scene",
+	queryDocument: "megu3d.query.document",
 	cmdDispatch: "megu3d.cmd.dispatch",
+	cmdSave: "megu3d.cmd.save",
+	cmdSaveAs: "megu3d.cmd.saveAs",
+	cmdOpen: "megu3d.cmd.open",
+	cmdNewDocument: "megu3d.cmd.newDocument",
+	cmdAutosave: "megu3d.cmd.autosave",
 } as const
 
 export type IpcName = (typeof IPC)[keyof typeof IPC]
@@ -31,6 +38,8 @@ export type IpcName = (typeof IPC)[keyof typeof IPC]
 export const EVENTS = {
 	scenePatch: "megu3d.event.scenePatch",
 	selection: "megu3d.event.selection",
+	/** Bound file, dirty flag and revision; drives the window title. */
+	document: "megu3d.event.document",
 } as const
 
 export type EventName = (typeof EVENTS)[keyof typeof EVENTS]
